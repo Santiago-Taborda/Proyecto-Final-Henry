@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-fontPrimary;
+    }
+
+    h1 { @apply text-h1; }
+    h2 { @apply text-h2; }
+    h3 { @apply text-h3; }
+    h4 { @apply text-h4; }
+    h5 { @apply text-h5; }
+    h6 { @apply text-h6; }
+
+    body { @apply bg-secondary text-primary font-fontSecondary dark:bg-primary dark:text-secondary; }
+    .oscuro { @apply bg-secondary text-tertiary dark:bg-tertiary dark:text-secondary; }
+    .borders { @apply border-tertiary dark:border-senary; }
+    .buttons { @apply text-center bg-primary hover:bg-quaternary dark:bg-septenary dark:hover:bg-quinary text-secondary rounded-md; }
+    .impunts { @apply bg-senary dark:bg-primary border borders outline-quaternary dark:outline-quinary; }
+    .impunts-2 { @apply p-1 rounded-md shadow-md shadow-gray-300 dark:shadow-gray-500; }
+    
+}
+
+@layer utilities {
+    .btn-hundido {
+        @apply shadow-[0_4px_0_#FFFFFF] transition-all duration-300 
+               hover:translate-y-1 hover:shadow-[0_1px_0_#FFFFFF] 
+               active:translate-y-2 active:shadow-none;
+    }
+}
